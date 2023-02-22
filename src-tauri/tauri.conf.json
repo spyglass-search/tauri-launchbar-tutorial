@@ -11,6 +11,7 @@
     "version": "0.0.0"
   },
   "tauri": {
+    "macOSPrivateApi": true,
     "allowlist": {
       "all": false,
       "shell": {
@@ -64,7 +65,12 @@
         "height": 128,
         "resizable": true,
         "title": "tauri-launch",
-        "width": 640
+        "width": 640,
+        "decorations": false,
+        "transparent": true,
+        "center": true,
+        "visible": false,
+        "alwaysOnTop": true
       }
     ]
   }
