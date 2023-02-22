@@ -9,8 +9,9 @@ const WINDOW: &str = "launcher";
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+fn greet(window: tauri::Window, name: &str) {
+    println!("Input received: {}", name);
+    toggle_launchbar(&window.app_handle());
 }
 
 fn toggle_launchbar(app: &AppHandle) {
